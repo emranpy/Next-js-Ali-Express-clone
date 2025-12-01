@@ -1,36 +1,170 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 AliExpress Clone — Full-Stack Multi-Vendor Marketplace
 
-## Getting Started
+A high-performance, production-ready multi-vendor e-commerce platform inspired by AliExpress.
+Built with **Next.js, TypeScript, MySQL, Prisma, Clerk**, and other modern tools to deliver a global, scalable shopping experience.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **Frontend**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Next.js** (App Router)
+* **TypeScript**
+* **Tailwind CSS**
+* **React Query / SWR** (data fetching)
+* **Shadcn UI / Custom UI components**
+* **Zustand / Context** (state management)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **Backend**
 
-## Learn More
+* **Next.js Server Actions & API Routes**
+* **MySQL** (production-grade relational DB)
+* **Prisma ORM**
+* **Redis** (caching, real-time counters, rate-limiting)
+* **UploadThing / Cloudinary** (media uploads)
 
-To learn more about Next.js, take a look at the following resources:
+### **Auth & Security**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **Clerk** (authentication + user management)
+* **Middleware-based RBAC** for Admin/Seller/User roles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### **DevOps**
 
-## Deploy on Vercel
+* **Vercel** (deployment)
+* **PlanetScale / Neon / Local MySQL**
+* **Docker** (optional)
+* **Stripe** (if you add payments later)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌍 Homepage
+
+* Fully responsive, modern UI.
+* Automatic country detection + manual location selector.
+* Location-aware product sections (best sellers, trending, flash deals, etc.).
+* Real-time search with instant suggestions (powered by Redis indexing or SQL LIKE queries).
+
+---
+
+## 🛍️ Product Page
+
+* High-quality image swiper with zoom + drag.
+* Complete variant system:
+
+  * Sizes
+  * Colors
+  * Stock per variant
+  * Variant-specific pricing & discounts
+* Real-time **live viewer counter** using Redis pub/sub.
+* Dynamic shipping logic:
+
+  * Country-specific shipping fees
+  * Store-level shipping rules
+  * Free shipping worldwide or selected countries
+* Full product content:
+
+  * HTML description
+  * Technical specifications
+  * Q&A section
+  * Related product recommendations
+* Store card displaying seller info, ratings, and suggested stores.
+
+---
+
+## 🛒 Cart & Checkout
+
+* Live-updating cart using server actions + optimistic UI.
+* Auto-recalculates:
+
+  * Prices
+  * Shipping fees
+  * Country changes
+* Add/remove items, wishlist support.
+* Checkout with full address management.
+* Coupon code system with discount logic.
+
+---
+
+## 🛠️ Admin Dashboard
+
+* Manage global marketplace settings:
+
+  * Categories
+  * Global offers
+  * Store approvals
+* Monitor sellers, orders, and marketplace activity.
+* Suspend or verify stores for safety and quality.
+
+---
+
+## 🏪 Seller Dashboard
+
+* Ultra-detailed product creation tools:
+
+  * Variants
+  * Specifications
+  * HTML descriptions
+  * Media uploads
+  * Shipping rules per country
+* Store-wide shipping configuration.
+* Create & manage coupon codes.
+* Advanced order management:
+
+  * Product-level status
+  * Shipping updates
+  * Customer communication workflow
+
+---
+
+## 🔎 Standalone Features
+
+### 🔍 Real-Time Search Page
+
+* Lightning-fast filtering, sorting, and search results.
+
+### 🏬 Store Pages
+
+* Seller-specific listings
+* Category filtering
+* Seller info and engagement stats
+
+### 🙍‍♂️ User Profiles
+
+* Manage:
+
+  * Orders
+  * Reviews
+  * Wishlists
+  * Addresses
+  * Followed stores
+  * Account settings
+
+---
+
+## 📦 Project Overview
+
+This project acts as a complete marketplace ecosystem, including:
+
+* Multi-vendor architecture
+* Role-based dashboards
+* Country-aware shopping experiences
+* Real-time features
+* Dynamic shipping logic
+* Full product + variant management
+* Admin control center
+* Scalable backend built on Prisma + MySQL
+* Secure auth with Clerk
+
+---
+
+## 🧪 Status
+
+✔️ Fully functional
+✔️ Scalable
+✔️ Production-ready
+✔️ Extendable for payments, logistics APIs, and more
+
+---
+
+Happy Building! 🚀
