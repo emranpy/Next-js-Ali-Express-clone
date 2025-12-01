@@ -165,6 +165,3 @@ This project acts as a complete marketplace ecosystem, including:
 ✔️ Production-ready
 ✔️ Extendable for payments, logistics APIs, and more
 
----
-
-Happy Building! 🚀
